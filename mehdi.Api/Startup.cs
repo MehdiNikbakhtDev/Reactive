@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MediatR;
+using mehdi.Api.Extentions;
+using mehdi.App.Activities;
+using mehdi.App.Core;
 using mehdi.Persistence;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -31,14 +35,7 @@ namespace mehdi.Api
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MehdiGram.Api", Version = "v1" });
-            });
-            services.AddDbContext<DataContext>(opt=>
-            {
-               opt.UseSqlite(_config.GetConnectionString("DefaultConnection"));
-            });
+            services.AddApplicationServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,7 +51,7 @@ namespace mehdi.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors("CorsPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
