@@ -73,10 +73,10 @@ function App() {
     // setSelectedActivity(activity);
   }
   function handleDeleteActivity(id: string) {
-    setSubmmitting (true);
-    agent.Activities.delete(id).then(()=>{
+    setSubmmitting(true);
+    agent.Activities.delete(id).then(() => {
       setActivities([...activities.filter(x => x.id !== id)]);
-      setSubmmitting (false);
+      setSubmmitting(false);
 
     });
 
