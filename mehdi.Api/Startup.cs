@@ -49,7 +49,6 @@ namespace mehdi.Api
             }
 
             app.UseHttpsRedirection();
-//fhbsdghfhbsdfds;
             app.UseRouting();
             app.UseCors("CorsPolicy");
             app.UseAuthorization();
