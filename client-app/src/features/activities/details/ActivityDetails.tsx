@@ -1,9 +1,13 @@
 import { observer } from 'mobx-react-lite';
 import React, { useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom';
-import { Button, Card, Image } from 'semantic-ui-react';
+import { useParams } from 'react-router-dom';
+import { Grid, GridColumn } from 'semantic-ui-react';
 import LoadingComponent from '../../../app/layout/LoadingComponents';
 import { useStore } from '../../../app/stores/store';
+import ActivityDetailedChat from './ActivitzDetailedChat';
+import ActivityDetailedHeader from './ActivitzDetailedHeader';
+import ActivityDetailedInfo from './ActivitzDetailedInfo';
+import ActivityDetailedSidebar from './ActivitzDetailedSidebar';
 
 
 
@@ -17,23 +21,33 @@ export default observer(function ActivityDetails() {
     }, [id, loadActivity]);
     if (loadingInitial || !activity) return <LoadingComponent />;
     return (
-        <Card fluid>
-            <Image src={`/assets/categoryImages/${activity.category}.jpg`} />
-            <Card.Content>
-                <Card.Header> {activity.title} </Card.Header>
-                <Card.Meta> <span >{activity.date} </span></Card.Meta>
-                <Card.Description>{activity.description}</Card.Description>
+        <Grid>
+            <Grid.Column width={10}>
+                <ActivityDetailedHeader activity={activity} />
+                <ActivityDetailedInfo activity={activity} />
+                <ActivityDetailedChat />
+            </Grid.Column>
+            <GridColumn width={6}>
+                <ActivityDetailedSidebar />
+            </GridColumn>
+        </Grid>
+        // <Card fluid>
+        //     <Image src={`/assets/categoryImages/${activity.category}.jpg`} />
+        //     <Card.Content>
+        //         <Card.Header> {activity.title} </Card.Header>
+        //         <Card.Meta> <span >{activity.date} </span></Card.Meta>
+        //         <Card.Description>{activity.description}</Card.Description>
 
-            </Card.Content>
-            <Card.Content extra>
-                <Button.Group widths='2'>
-                    <Button /*onClick={() => openForm(activity.id)} */ basic as={Link} to={`/manage/${activity.id}`}  color='blue' content='Edit' />
-                    <Button /*onClick={cancelSelectedActivity}*/ basic  as={Link} to={`/activities`}  color='grey' content='Cancel' />
-                </Button.Group>
-            </Card.Content>
+        //     </Card.Content>
+        //     <Card.Content extra>
+        //         <Button.Group widths='2'>
+        //             <Button /*onClick={() => openForm(activity.id)} */ basic as={Link} to={`/manage/${activity.id}`}  color='blue' content='Edit' />
+        //             <Button /*onClick={cancelSelectedActivity}*/ basic  as={Link} to={`/activities`}  color='grey' content='Cancel' />
+        //         </Button.Group>
+        //     </Card.Content>
 
 
-        </Card>
+        // </Card>
 
 
     );
