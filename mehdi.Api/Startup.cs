@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using FluentValidation.AspNetCore;
 using MediatR;
 using mehdi.Api.Extentions;
+using mehdi.Api.Middleware;
 using mehdi.App.Activities;
 using mehdi.App.Core;
 using mehdi.Persistence;
@@ -33,7 +35,11 @@ namespace mehdi.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddControllers().AddFluentValidation(config =>
+            {
+                config.RegisterValidatorsFromAssemblyContaining<Create>();
+                
+            });
             services.AddControllers();
             services.AddApplicationServices(_config);
         }
@@ -41,9 +47,10 @@ namespace mehdi.Api
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+          app.UseMiddleware<ExceptionMiddleware>();
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+               // app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MehdiGram.Api v1"));
             }
