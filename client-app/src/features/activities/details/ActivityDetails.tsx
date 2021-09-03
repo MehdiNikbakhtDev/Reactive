@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom';
 import { Grid, GridColumn } from 'semantic-ui-react';
 import LoadingComponent from '../../../app/layout/LoadingComponents';
 import { useStore } from '../../../app/stores/store';
-import ActivityDetailedChat from './ActivitzDetailedChat';
-import ActivityDetailedHeader from './ActivitzDetailedHeader';
-import ActivityDetailedInfo from './ActivitzDetailedInfo';
-import ActivityDetailedSidebar from './ActivitzDetailedSidebar';
+import ActivityDetailedChat from './ActivityDetailedChat';
+import ActivityDetailedHeader from './ActivityDetailedHeader';
+import ActivityDetailedInfo from './ActivityDetailedInfo';
+import ActivityDetailedSidebar from './ActivityDetailedSidebar';
 
 
 

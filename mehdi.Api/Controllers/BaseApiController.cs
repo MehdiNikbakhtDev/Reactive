@@ -13,7 +13,6 @@ namespace mehdi.Api.Controllers
         protected IMediator Mediator => mediator ??= HttpContext.RequestServices.GetService<IMediator>();
         protected ActionResult HandleResult<T>(Result<T> result)
         {
-            int n;
             if(result==null) return NotFound();
             if (result.IsSuccess && result.Value != null)
                 return Ok(result.Value);
