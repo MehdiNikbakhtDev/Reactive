@@ -6,6 +6,7 @@ using MediatR;
 using mehdi.App.Activities;
 using mehdi.Domain;
 using mehdi.Persistence;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
