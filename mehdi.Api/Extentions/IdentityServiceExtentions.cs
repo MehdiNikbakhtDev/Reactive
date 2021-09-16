@@ -1,9 +1,11 @@
 using System.Text;
+using Infrastracture.Security;
 //using AutoMapper.Configuration;
 using mehdi.Api.Services;
 using mehdi.Domain;
 using mehdi.Persistence;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +35,13 @@ namespace mehdi.Api.Extentions
                     ValidateAudience = false
                 };
             });
+            services.AddAuthorization(opt => 
+            {
+                opt.AddPolicy("IsActivityHost",policy=>{
+                    policy.Requirements.Add(new IsHostRequirement());
+                });
+            });
+            services.AddTransient<IAuthorizationHandler,IsHostRequirementHandler>();
             services.AddScoped<TokenService>();
             return services;
         }

@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using mehdi.Persistence;
 
 namespace mehdi.Persistence.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20210912125233_ActivityAttendee")]
+    partial class ActivityAttendee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -161,9 +163,6 @@ namespace mehdi.Persistence.Migrations
 
                     b.Property<string>("Description")
                         .HasColumnType("TEXT");
-
-                    b.Property<bool>("IsCancelled")
-                        .HasColumnType("INTEGER");
 
                     b.Property<string>("Title")
                         .HasColumnType("TEXT");
@@ -318,7 +317,7 @@ namespace mehdi.Persistence.Migrations
             modelBuilder.Entity("mehdi.Domain.ActivityAttendee", b =>
                 {
                     b.HasOne("mehdi.Domain.Activity", "Activity")
-                        .WithMany("Attendees")
+                        .WithMany("Attendee")
                         .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -336,7 +335,7 @@ namespace mehdi.Persistence.Migrations
 
             modelBuilder.Entity("mehdi.Domain.Activity", b =>
                 {
-                    b.Navigation("Attendees");
+                    b.Navigation("Attendee");
                 });
 
             modelBuilder.Entity("mehdi.Domain.AppUser", b =>

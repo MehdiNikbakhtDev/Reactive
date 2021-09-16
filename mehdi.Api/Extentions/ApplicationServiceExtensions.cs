@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using MediatR;
 using mehdi.App.Activities;
 using mehdi.App.Core;
+using mehdi.App.Interfaces;
+using Infrastracture.Security;
 
 namespace mehdi.Api.Extentions
 {
@@ -28,6 +30,7 @@ namespace mehdi.Api.Extentions
             });
             services.AddMediatR(typeof(List.Handler).Assembly);
             services.AddAutoMapper(typeof(MappingProfiles).Assembly);
+            services.AddScoped<IUserAccessor,UserAccessor>();
 return services;
 
         }

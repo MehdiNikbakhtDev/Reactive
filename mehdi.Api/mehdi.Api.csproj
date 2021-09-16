@@ -19,6 +19,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\mehdi.App\mehdi.App.csproj" />
+    <ProjectReference Include="..\Infrastracture\Infrastracture.csproj" />
   </ItemGroup>
 
 </Project>
