@@ -6,6 +6,7 @@ using FluentValidation.AspNetCore;
 using MediatR;
 using mehdi.Api.Extentions;
 using mehdi.Api.Middleware;
+using mehdi.Api.SignalR;
 using mehdi.App.Activities;
 using mehdi.App.Core;
 using mehdi.Persistence;
@@ -71,6 +72,7 @@ namespace mehdi.Api
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<ChatHub>("/chat");
             });
         }
     }

@@ -1,4 +1,5 @@
-import { Redirect, Route, RouteComponentProps, RouteProps } from "react-router-dom";
+import React from 'react'
+import { Redirect, Route, RouteComponentProps, RouteProps } from 'react-router-dom'
 import { useStore } from "../stores/store";
 
 interface Props extends RouteProps {

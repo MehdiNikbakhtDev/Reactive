@@ -9,15 +9,13 @@ import ActivityForm from '../../features/activities/form/ActivityForm';
 import ActivityDetails from '../../features/activities/details/ActivityDetails';
 import TestErrors from '../../features/errors/TestError';
 import { ToastContainer } from 'react-toastify';
-// import NotFound from '../../features/errors/NotFound';
 import ServerError from '../../features/errors/ServerError';
 import { useStore } from '../stores/store';
 import ModalContainer from '../common/modals/ModalContainer';
 import ProfilePage from '../../features/profiles/ProfilePage';
+import PrivateRoute from './PrivateRoute';
 import LoadingComponent from './LoadingComponents';
- import PrivateRoute from './PrivateRoute';
-// import RegisterSuccess from '../../features/users/RegisterSuccess';
-// import ConfirmEmail from '../../features/users/ConfirmEmail';
+import NotFound from '../../features/errors/Notfound';
 
 function App() {
   const location = useLocation();
@@ -27,7 +25,7 @@ function App() {
     if (commonStore.token) {
       userStore.getUser().finally(() => commonStore.setAppLoaded());
     } else {
-     // userStore.getFacebookLoginStatus().then(() => commonStore.setAppLoaded());
+      commonStore.setAppLoaded();
     }
   }, [commonStore, userStore])
 
@@ -51,9 +49,7 @@ function App() {
                 <PrivateRoute path='/profiles/:username' component={ProfilePage} />
                 <PrivateRoute path='/errors' component={TestErrors} />
                 <Route path='/server-error' component={ServerError} />
-                {/* <Route path='/account/registerSuccess' component={RegisterSuccess} />
-                <Route path='/account/verifyEmail' component={ConfirmEmail} />
-                <Route component={NotFound} /> */}
+                <Route component={NotFound} />
               </Switch>
             </Container>
           </>
