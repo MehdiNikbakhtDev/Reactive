@@ -13,7 +13,7 @@ export default function ProfileCard({ profile }: Props) {
             <Card.Content>
 
                 <Card.Header>
-                    {profile.displayname}
+                    {profile.displayName}
                 </Card.Header>
                 <Card.Description>Bio goes here</Card.Description>
             </Card.Content>
