@@ -1,8 +1,8 @@
-using mehdi.Api.Extentions;
 using mehdi.App.Core;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using mehdi.Api.Extensions;
 
 namespace mehdi.Api.Controllers
 {
