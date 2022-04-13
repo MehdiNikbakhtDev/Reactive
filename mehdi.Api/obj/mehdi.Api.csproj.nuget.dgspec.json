@@ -1,0 +1,389 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Api\\mehdi.Api.csproj": {}
+  },
+  "projects": {
+    "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\Infrastracture\\Infrastracture.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\Infrastracture\\Infrastracture.csproj",
+        "projectName": "Infrastracture",
+        "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\Infrastracture\\Infrastracture.csproj",
+        "packagesPath": "C:\\Users\\14001204\\.nuget\\packages\\",
+        "outputPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\Infrastracture\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\14001204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj": {
+                "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "CloudinaryDotNet": {
+              "target": "Package",
+              "version": "[1.15.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Api\\mehdi.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Api\\mehdi.Api.csproj",
+        "projectName": "mehdi.Api",
+        "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Api\\mehdi.Api.csproj",
+        "packagesPath": "C:\\Users\\14001204\\.nuget\\packages\\",
+        "outputPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\14001204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\Infrastracture\\Infrastracture.csproj": {
+                "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\Infrastracture\\Infrastracture.csproj"
+              },
+              "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj": {
+                "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj",
+        "projectName": "mehdi.App",
+        "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\mehdi.App.csproj",
+        "packagesPath": "C:\\Users\\14001204\\.nuget\\packages\\",
+        "outputPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\14001204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj": {
+                "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj"
+              },
+              "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Persistence\\mehdi.Persistence.csproj": {
+                "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Persistence\\mehdi.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[10.3.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjectionFixed": {
+              "target": "Package",
+              "version": "[5.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj",
+        "projectName": "mehdi.Domain",
+        "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj",
+        "packagesPath": "C:\\Users\\14001204\\.nuget\\packages\\",
+        "outputPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\14001204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Persistence\\mehdi.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Persistence\\mehdi.Persistence.csproj",
+        "projectName": "mehdi.Persistence",
+        "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Persistence\\mehdi.Persistence.csproj",
+        "packagesPath": "C:\\Users\\14001204\\.nuget\\packages\\",
+        "outputPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\14001204\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj": {
+                "projectPath": "E:\\WebLearning\\React\\SosialNetwork01\\MehdiGram01\\mehdi.Domain\\mehdi.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
